@@ -33,7 +33,9 @@ export default function LoginPage() {
         @tailwind base;
         @tailwind components;
         @tailwind utilities;
-        
+        .glow-effect {
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6), 0 0 25px 15px rgba(255, 255, 255, 0.3);
+  }
         @layer base {
           :root {
             --background: 0 0% 100%;
@@ -88,19 +90,20 @@ export default function LoginPage() {
           <div className="absolute top-[calc(50%-500px)] left-[calc(50%-500px)] w-[1000px] h-[1000px] rounded-full bg-purple-500/20 blur-3xl animate-pulse" />
           <div className="absolute top-[calc(50%-400px)] left-[calc(50%-400px)] w-[800px] h-[800px] rounded-full bg-blue-500/20 blur-3xl animate-pulse delay-1000" />
         </div>
+       
          <div>
-          <h1 className="text-7xl">Your Music,<br></br>Your Mood</h1>
-          <p className="text-xl mt-4">Let MoodSync curate the perfect playlist based on your mood :)</p>
+          <h1 className="text-7xl text-white">Your Music,<br></br>Your Mood</h1>
+          <p className="text-xl text-white mt-4">Let MoodSync curate the perfect playlist based on your mood :)</p>
          </div>
       
-        <div className="w-full max-w-md mx-4 bg-black/40 border border-white/10 rounded-lg backdrop-blur-xl">
+        <div className="w-full max-w-md mx-4 glow-effect bg-black/40 border border-white/10 rounded-lg backdrop-blur-xl">
          
-          <div className="space-y-6 text-center p-6 pb-8">
+          <div className="space-y-6 text-center  p-6 pb-8">
             <div className="flex items-center justify-center gap-2 text-green-400">
               <Music4 className="h-8 w-8" />
               <h1 className="text-3xl font-bold tracking-tight">MoodSync</h1>
             </div>
-            <p className="text-zinc-400 px-8">
+            <p className="text-zinc-300 px-8">
               Discover personalized playlists that match your mood, powered by Spotify
             </p>
           </div>
@@ -109,7 +112,7 @@ export default function LoginPage() {
               Continue with Spotify
             </button>
           </div>
-          <div className="text-sm text-center text-zinc-400 p-6 pt-0 flex flex-col gap-4">
+          <div className="text-sm text-center text-zinc-300 p-6 pt-0 flex flex-col gap-4">
             <p>By continuing, you agree to MoodSync's Terms of Service and Privacy Policy</p>
             <div className="text-xs">
               <Link href="#" className="hover:text-white transition-colors">
@@ -123,6 +126,7 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
+      
     </>
   )
 }
