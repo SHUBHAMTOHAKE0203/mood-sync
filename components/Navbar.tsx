@@ -27,8 +27,8 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-10">
-            <li><a href="#" className="text-white">Home</a></li>
-            <li><a href="#" className="text-white">About</a></li>
+            <li><a href="/" className="text-white">Home</a></li>
+            <li><a href="/about" className="text-white">About</a></li>
             <li><a href="#" className="text-white">Create Your Playlist</a></li>
             <li>
               <a 
@@ -44,8 +44,8 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isOpen && (
           <ul className="md:hidden flex flex-col space-y-4 mt-4">
-            <li><a href="#" className="text-white block">Home</a></li>
-            <li><a href="#" className="text-white block">About</a></li>
+            <li><a href="/" className="text-white block">Home</a></li>
+            <li><a href="/about" className="text-white block">About</a></li>
             <li><a href="#" className="text-white block">Create Your Playlist</a></li>
             <li>
               <a 

@@ -1,6 +1,6 @@
 import React from "react";
 import { cookies } from 'next/headers';
-
+import Navbar from "@/components/Navbar";
 interface SpotifyImage {
     url: string;
     height: number;
@@ -71,7 +71,9 @@ export default async function ProfilePage() {
     }
 
     return (
-        <div className="min-h-screen p-8">
+        <>
+        <Navbar/>
+        <div className="min-h-screen bg-black p-8">
             <div className="max-w-4xl mx-auto space-y-6">
                 <div className="bg-white shadow rounded-lg p-6">
                     <div className="flex items-start space-x-6">
@@ -79,7 +81,7 @@ export default async function ProfilePage() {
                             <img
                                 src={profile.images[0].url}
                                 alt={profile.display_name}
-                                className="w-32 h-32 rounded-full"
+                                className="w-32 h-32 border-2 border-black rounded-full"
                             />
                         )}
                         <div className="flex-1">
@@ -146,14 +148,15 @@ export default async function ProfilePage() {
                         </div>
                     </div>
                 </div>
-
-                <div className="bg-white shadow rounded-lg p-6">
+                
+                {/* <div className="bg-white shadow rounded-lg p-6">
                     <h2 className="text-lg text-black font-semibold mb-4">Raw Profile Data</h2>
                     <pre className="bg-gray-100 p-4 text-black rounded-lg overflow-auto max-h-96 text-sm">
                         {JSON.stringify(profile, null, 2)}
                     </pre>
-                </div>
+                </div> */}
             </div>
         </div>
+        </>
     );
 }
